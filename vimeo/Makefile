@@ -52,7 +52,6 @@ video-only-$(RES).mp4: video-only-$(RES).ms4
 
 .PHONY: _video
 _video: video-only-$(RES).mp4 audio-only.mp4
-	echo $(RES)
 	ffmpeg \
 		-i $< \
 		-i $(word 2,$^) \
